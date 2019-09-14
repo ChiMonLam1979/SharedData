@@ -6,6 +6,10 @@ class State
 {
 public:
 
+	State(VectorState& vectorState);
+
+	~State();
+
 	int getVectorSize();
 
 	int getVectorValue(int index);
@@ -14,7 +18,7 @@ public:
 
 private:
 
-	VectorState vectorState;
+	VectorState& vectorState;
 
 	CriticalSection objectLock;
 };

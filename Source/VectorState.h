@@ -5,6 +5,10 @@ class VectorState
 {
 public:
 
+	VectorState(int size);
+
+	~VectorState();
+
 	int getSize();
 
 	int getValue(int index);
@@ -13,5 +17,5 @@ public:
 
 private:
 
-	std::vector<int> vector{ 0, 0, 0 };
+	std::vector<std::unique_ptr<std::atomic<int>>> vector;
 };

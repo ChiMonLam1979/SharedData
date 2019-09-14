@@ -1,5 +1,14 @@
 #include "State.h"
 
+
+State::State(VectorState& vectorState) : vectorState(vectorState)
+{
+}
+
+State::~State()
+{
+}
+
 int State::getVectorSize()
 {
 	return vectorState.getSize();
